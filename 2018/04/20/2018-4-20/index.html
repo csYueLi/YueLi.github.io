@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="NE,文献管理," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="写在前面：本篇主要为原创内容，转载请保留原文链接。如有错误欢迎联系cugliyue@163.com指正。   noteexpress 可以用来保存文献引用信息，插入附件，添加笔记等，主要功能是可以在写论文时，管理最后的参考文献。  一.安装华中科技大学图书馆有noteexpress（后文简称NE）的电子资源，直接下载安装即可。">
+<meta name="keywords" content="NE,文献管理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="noteexpress 管理文献">
+<meta property="og:url" content="http://yoursite.com/2018/04/20/2018-4-20/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="写在前面：本篇主要为原创内容，转载请保留原文链接。如有错误欢迎联系cugliyue@163.com指正。   noteexpress 可以用来保存文献引用信息，插入附件，添加笔记等，主要功能是可以在写论文时，管理最后的参考文献。  一.安装华中科技大学图书馆有noteexpress（后文简称NE）的电子资源，直接下载安装即可。">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2018/04/20/2018-4-20/1524227699317.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/20/2018-4-20/1524227765610.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/20/2018-4-20/1524227789338.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/20/2018-4-20/1524227854076.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/20/2018-4-20/1524227857816.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/20/2018-4-20/1524227866387.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/20/2018-4-20/1524227870556.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/20/2018-4-20/1524227896341.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/20/2018-4-20/1524227912585.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/20/2018-4-20/1524228049554.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/20/2018-4-20/1524228122111.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/20/2018-4-20/1524228194226.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/20/2018-4-20/1524228210413.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/20/2018-4-20/1524228242020.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/20/2018-4-20/1524228271239.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/20/2018-4-20/1524228289100.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/20/2018-4-20/1524228331345.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/20/2018-4-20/1524228406770.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/20/2018-4-20/1524228435930.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/20/2018-4-20/1524228511145.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/20/2018-4-20/1524228544140.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/20/2018-4-20/1524228580908.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/20/2018-4-20/1524228606696.png">
+<meta property="og:updated_time" content="2018-04-23T01:58:06.394Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="noteexpress 管理文献">
+<meta name="twitter:description" content="写在前面：本篇主要为原创内容，转载请保留原文链接。如有错误欢迎联系cugliyue@163.com指正。   noteexpress 可以用来保存文献引用信息，插入附件，添加笔记等，主要功能是可以在写论文时，管理最后的参考文献。  一.安装华中科技大学图书馆有noteexpress（后文简称NE）的电子资源，直接下载安装即可。">
+<meta name="twitter:image" content="http://yoursite.com/2018/04/20/2018-4-20/1524227699317.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/04/20/2018-4-20/"/>
+
+
+
+
+
+  <title>noteexpress 管理文献 | Hexo</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/20/2018-4-20/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">noteexpress 管理文献</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-20T20:15:56+08:00">
+                2018-04-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <hr>
+<p>写在前面：本篇主要为原创内容，转载请保留原文链接。如有错误欢迎联系<a href="mailto:cugliyue@163.com" target="_blank" rel="noopener">cugliyue@163.com</a>指正。</p>
+<hr>
+<ul>
+<li><strong>noteexpress</strong> 可以用来保存文献引用信息，插入附件，添加笔记等，主要功能是可以在写论文时，管理最后的参考文献。</li>
+</ul>
+<h2 id="一-安装"><a href="#一-安装" class="headerlink" title="一.安装"></a>一.安装</h2><p>华中科技大学图书馆有noteexpress（后文简称NE）的<a href="http://www.lib.hust.edu.cn/DBView.aspx?id=40&amp;Tab=1" target="_blank" rel="noopener">电子资源</a>，直接下载安装即可。</p>
+<a id="more"></a>
+<h2 id="二-使用"><a href="#二-使用" class="headerlink" title="二.使用"></a>二.使用</h2><ul>
+<li>资源：<a href="http://www.inoteexpress.com/wiki/index.php/%E9%A6%96%E9%A1%B5" target="_blank" rel="noopener">使用教程</a></li>
+<li>概念<ul>
+<li>题录：可以理解为每篇文章的信息，如论文名、作者、出版社等，构成的条目</li>
+<li>过滤器：关于引用的格式有不同的标准，比如在维基百科上经常能看到的格式有：BibTex，Endnote，GB/T等。不同格式的引用导入到NE中生成题录的时候需要过滤器进行处理识别。</li>
+<li>数据库：emmm……可以理解为自己所有的文献信息的打包，当然你可以打很多包，建好多个数据库，23333</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-1-构建数据库"><a href="#2-1-构建数据库" class="headerlink" title="2.1 构建数据库"></a><code>2.1 构建数据库</code></h3><ul>
+<li><p>安装完毕后，运行NE，会有示例数据库。可以看到题录下保存了手稿，该手稿中也有相应的使用教程。<br><img src="1524227699317.png" alt=""></p>
+</li>
+<li><p>文件-&gt;新建数据库，在合适的位置生成数据库<br><img src="1524227765610.png" alt=""></p>
+</li>
+<li><p>如我的数据库名字就叫”论文“，保存在OneDrive文件夹下，能够实现云端同步，实现多终端NE使用。毕竟NE的数据库数据才是最重要的，软件随便哪个平台一装就好了，数据库在云端同步了，不管什么平台打开就能用了。<br><img src="1524227789338.png" alt=""></p>
+</li>
+</ul>
+<hr>
+<hr>
+<h3 id="2-2-导入题录"><a href="#2-2-导入题录" class="headerlink" title="2.2 导入题录"></a><code>2.2 导入题录</code></h3><h4 id="2-2-1-方法1"><a href="#2-2-1-方法1" class="headerlink" title="2.2.1 方法1"></a>2.2.1 方法1</h4><ul>
+<li><p>寻找引用信息：常用的方法是在google学术搜索上搜索相应的文章名，如Timing channel ……，然后点击按钮，即会显示不同格式的引用信息。选择其中某种格式的引用信息复制即可。这里选择BibTex格式。原因：NE中很方便的能找到该格式的过滤器，其他的格式。。。无力吐槽<br><img src="1524227854076.png" alt=""><br><img src="1524227857816.png" alt=""></p>
+</li>
+<li><p>导入题录：进入NE，在已经构建好的数据库下，右键，题录来源选择 来自剪贴版，过滤器选择 BibTex，即可成功导入题录信息。<br><img src="1524227866387.png" alt=""><br><img src="1524227870556.png" alt=""></p>
+</li>
+</ul>
+<hr>
+<h4 id="2-2-2-方法2"><a href="#2-2-2-方法2" class="headerlink" title="2.2.2 方法2"></a>2.2.2 方法2</h4><ul>
+<li><p>可以利用NE进行在线检索，如下图是在在线数据库CNKI中国知网中搜索Timing Channel得到的结果，可以勾选需要的题录并保存。</p>
+</li>
+<li><p>这个方法主要适用于要找的资料位于知网等一些没有被墙的数据库，如果想访问google scholar，需要设置代理服务器，但是学校版的NE开了shadowsocks的全局模式IP就不对了，实话说这个用法有点鸡肋。<br><img src="1524227896341.png" alt=""></p>
+</li>
+</ul>
+<hr>
+<h4 id="2-2-3-方法3"><a href="#2-2-3-方法3" class="headerlink" title="2.2.3 方法3"></a>2.2.3 方法3</h4><ul>
+<li>直接拖拽相应文件，如这里的NoteExpress功能图解pdf，到相应的目录下，即自动筛选文件名生成题录，这种情况下生成的题录通常都不是很全，一般只有一个标题。<br><img src="1524227912585.png" alt=""></li>
+</ul>
+<hr>
+<hr>
+<h3 id="2-3-参考文献管理"><a href="#2-3-参考文献管理" class="headerlink" title="2.3 参考文献管理"></a><code>2.3 参考文献管理</code></h3><h4 id="2-3-1-插入引文，生成参考文献"><a href="#2-3-1-插入引文，生成参考文献" class="headerlink" title="2.3.1 插入引文，生成参考文献"></a>2.3.1 插入引文，生成参考文献</h4><ul>
+<li>NE在安装时会自动在word中加载插件，若加载插件出现问题，可参考<a href="http://www.inoteexpress.com/wiki/index.php/%E6%B3%A8%E5%86%8C%E5%8F%8A%E5%AE%89%E8%A3%85Word%E6%8F%92%E4%BB%B6" target="_blank" rel="noopener">资料</a>。</li>
+<li><p>在管理参考文献时，首先点到NE的word插件<br><img src="1524228049554.png" alt=""></p>
+</li>
+<li><p>例子：在例子两字后面插入上标[1]，对应的文献名为Timing channel protection for a shared memory controller searchgate。</p>
+</li>
+<li>第一步：在NE中选中对应文献题录，如下图<br><img src="1524228122111.png" alt=""></li>
+<li><p>第二步：在word中点击插入引文<br><img src="1524228194226.png" alt=""></p>
+</li>
+<li><p>可以看到，word中生成了文献角标，相应的参考文献内容，以及校对报告<br><img src="1524228210413.png" alt=""></p>
+</li>
+</ul>
+<hr>
+<h4 id="2-3-2-参考文献格式管理"><a href="#2-3-2-参考文献格式管理" class="headerlink" title="2.3.2 参考文献格式管理"></a>2.3.2 参考文献格式管理</h4><ul>
+<li><p>通常情况下，写论文的时候，不同的会议或者期刊对参考文献的格式要求也是不同的，比如有些期刊要求多于三个的作者，只显示三个作者名，并加et al.或者等；有些期刊要求中国作者名表示为英文形式时，姓在前，名在后……诸如此类的参考文献格式要求需要修改样式管理器实现。</p>
+</li>
+<li><p>工具-&gt;样式-&gt;样式管理器，可以看到如图<br><img src="1524228242020.png" alt=""></p>
+</li>
+<li><p>上图的界面显示的是默认的样式管理器，比如上面有《地球学报》，即地球学报刊物的参考文献要求的格式。通常情况下一些刊物的样式都会有一些微调，所以有些还需要自己设置，这时就需要自定义。当然为了简化工作，我选择在已有的样式管理器上做修改。</p>
+</li>
+<li><p>选择一个与最终需要生成样式差距最小的版本，如下图选择了计算机学报，另存为新的样式，点击确定。<br><img src="1524228271239.png" alt=""></p>
+</li>
+<li><p>在样式管理器自定义选项中，可以看到刚刚新生成的计算机科学样式，双击打开.<br><img src="1524228289100.png" alt=""></p>
+</li>
+<li>主要介绍引文与题录的修改。<ul>
+<li>这里的引文对应word里插入到文字中的角标，比如上面的就是上标。</li>
+<li>这里的题录对应生成的参考文献，比如上面的 <em>[1] WANG Y, FERRAIUOLO A, SUH G E.  Timing Channel Protection for a Shared Memory Controller[C]// 2014 IEEE 20th International Symposium on High Performance Computer Architecture. Orlando: IEEE, 2014:225-236</em>  这一串文字<br><img src="1524228331345.png" alt=""></li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>引文修改</strong></p>
+<ul>
+<li>引文修改，一般的引文都是上标形式，模板里面提供了下标形式，可以按需要设置，一般很少需要对引文做特殊的设置。</li>
+<li>这里出现的English和Chinese，表示分别针对中英文文献进行设计输出参考文献格式。即英文文献使用一套模板输出参考文献，中文文献使用另外一套，使用哪套模板取决于文献的中英文类型，设置的时候需要注意。<br><img src="1524228406770.png" alt=""></li>
+</ul>
+<hr>
+<p><strong>题录修改</strong></p>
+<ul>
+<li><strong>模板设置</strong></li>
+<li>模板主要指定了输出的参考文献的模板、格式。比如这里指定了模板的题录类型有期刊文章、书、书的章节等。没有设置参考文献模板的题录在生成参考文献时，采用通用模板。若需要对某种题录类型的输出参考文件格式做设置，可如下图，将该类型选中后设置。</li>
+<li><p>这出现的English和Chinese，表示分别针对中英文文献进行设计输出参考文献格式。即英文文献使用一套模板输出参考文献，中文文献使用另外一套，使用哪套模板取决于文献的中英文类型，设置的时候需要注意。<br><img src="1524228435930.png" alt=""></p>
+</li>
+<li><p>某期刊对会议论文的参考文件格式要求：著者.析出文献题名 [C]//会议论文集.出版地：出版社，出版年：起止页码.</p>
+</li>
+<li><p>按照要求对会议论文的模板做修改，按照要求插入相应字段，至于|、*的使用，网上有<a href="http://www.inoteexpress.com/wiki/index.php/%E5%88%B6%E4%BD%9C%E8%BE%93%E5%87%BA%E6%A0%B7%E5%BC%8F" target="_blank" rel="noopener">相应资料</a>，直接根据已有的模板依样画葫芦也可以。<br><img src="1524228511145.png" alt=""></p>
+</li>
+<li><p>著者.析出文献题名 [C]//会议论文集.出版地：出版社，出版年：起止页码. 格式要求可以转换成NE中相应的字段：作者|. <em>标题[C]//| 论文集标题|. </em>会议地点|: 主办单位|, 年份|:页数|.</p>
+</li>
+</ul>
+<hr>
+<ul>
+<li><strong>作者列表设置</strong></li>
+<li>作者列表设置主要就是列出作者的个数，以及超过一定个数后的缩写形式，一般不怎么需要变动<br><img src="1524228544140.png" alt=""></li>
+</ul>
+<hr>
+<ul>
+<li><strong>作者姓名设置</strong></li>
+<li>这里出现的English和Chinese，跟前面不一样！！！不一样！！！不一样！！！（吐槽日期2018-4-20，后面会不会改进不知道）也不知道程序员是怎么设计出来的，心累……</li>
+<li>这里只有English下的设置是有效的，Chinese下的设置纹丝不动……红框中的部分对英文文献起作用，蓝色框中的部分对中文文献的英文形式起作用。<br><img src="1524228580908.png" alt=""></li>
+</ul>
+<ul>
+<li>下面给出具体例子：</li>
+<li>英文文献第一作者名为<strong>姓 名</strong>形式，其他作者名为<strong>姓，名</strong>形式</li>
+<li>中文文献的英文形式：所有作者的姓名均表示为<strong>名 姓</strong>形式<br><img src="1524228606696.png" alt=""></li>
+<li>[1] <strong>Wang Y</strong>, Ferraiuolo, A, Suh, G Ecest. Timing channel protection for a shared memory controller[Z]. Orlando: IEEE, 2014225-236.</li>
+<li>[2] Sasy S, <strong>Gorbunov, S</strong>, Fletcher, C. ZeroTrace: Oblivious memory primitives from Intel SGX[J]. IACR Cryptology ‘Archive Report. 2017, 549: 2017.</li>
+<li><p>[3] <strong>J Wang</strong>, Y Jiang, Q Li, et al. 2017(05): 3-9.(In Chinese) 王进文，江勇，李琦，等. SGX技术应用研究综述[J]. 网络新媒体技术. 2017(05): 3-9.</p>
+</li>
+<li><p>至于中文名字的设置，好像设置不动……貌似也不需要特地去设置……</p>
+</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/NE-文献管理/" rel="tag"># NE,文献管理</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/10/10/2017-10-10/" rel="next" title="Windows下Hexo+github搭建blog">
+                <i class="fa fa-chevron-left"></i> Windows下Hexo+github搭建blog
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/29/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">John Doe</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-安装"><span class="nav-text">一.安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-使用"><span class="nav-text">二.使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-构建数据库"><span class="nav-text">2.1 构建数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-导入题录"><span class="nav-text">2.2 导入题录</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-1-方法1"><span class="nav-text">2.2.1 方法1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-2-方法2"><span class="nav-text">2.2.2 方法2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-3-方法3"><span class="nav-text">2.2.3 方法3</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-参考文献管理"><span class="nav-text">2.3 参考文献管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-1-插入引文，生成参考文献"><span class="nav-text">2.3.1 插入引文，生成参考文献</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-2-参考文献格式管理"><span class="nav-text">2.3.2 参考文献格式管理</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
